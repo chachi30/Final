@@ -1,30 +1,34 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-import Header from './basta/Header';
-import HeroSection from './basta/HeroSection';
-import AboutMe from './basta/AboutMe';
-import Skills from './basta/Skills';
-import Projects from './basta/Projects';
-import Contact from './basta/Contact';
-import Footer from './basta/Footer';
+// Lazy load components for performance
+const Header = lazy(() => import('./basta/Header'));
+const HeroSection = lazy(() => import('./basta/HeroSection'));
+const AboutMe = lazy(() => import('./basta/AboutMe'));
+const Footer = lazy(() => import('./basta/Footer'));
+
+// Loading component for Suspense
+const LoadingFallback = () => (
+  <div className="loading-container">
+    <div className="loading-spinner"></div>
+  </div>
+);
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<HeroSection />} />
-          <Route path="/about" element={<AboutMe />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
+    <BrowserRouter>
+      <div className="app">
+        <Suspense fallback={<LoadingFallback />}>
+          <Header />
+          <Routes>
+            <Route path="/" element={<HeroSection />} />
+            <Route path="/about" element={<AboutMe />} />
+          </Routes>
+          <Footer />
+        </Suspense>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
