@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaGithub, FaFacebook, FaInstagram, FaEnvelope, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaFacebook, FaInstagram, FaEnvelope,  } from 'react-icons/fa';
+import { GiBurningPassion } from "react-icons/gi";
 import './Footer.css';
 
 const Footer = () => {
@@ -51,7 +52,7 @@ const Footer = () => {
           </div>
           
           <p className="footer-text">
-            Made with <FaHeart className="heart-icon" /> © {currentYear}
+            Made with <GiBurningPassion className="GiBurningPassion-icon" /> © {currentYear}
           </p>
         </div>
       </div>
