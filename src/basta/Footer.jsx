@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="social-links">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/chachi30"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
@@ -21,7 +21,7 @@ const Footer = () => {
               <span>GitHub</span>
             </a>
             <a
-              href="https://facebook.com/yourusername"
+              href="https://facebook.com/chacha0530"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
@@ -31,7 +31,7 @@ const Footer = () => {
               <span>Facebook</span>
             </a>
             <a
-              href="https://instagram.com/yourusername"
+              href="https://instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
@@ -41,7 +41,7 @@ const Footer = () => {
               <span>Instagram</span>
             </a>
             <a
-              href="mailto:your.email@gmail.com"
+              href="t.chachi32@gmail.com"
               className="social-icon"
               aria-label="Email Contact"
             >
